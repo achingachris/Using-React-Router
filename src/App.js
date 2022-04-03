@@ -1,7 +1,17 @@
 import React from 'react'
+import { Link, Outlet } from 'react-router-dom'
 
 const App = () => {
-  return <div>A very boring app</div>
+  return (
+    <>
+      <h1>A very boring app</h1>
+      <nav>
+        <Link to='/flights'>Flights</Link> |{' '}
+        <Link to='/airports'>Airports</Link>
+      </nav>
+      <Outlet />
+    </>
+  )
 }
 
 export default App
